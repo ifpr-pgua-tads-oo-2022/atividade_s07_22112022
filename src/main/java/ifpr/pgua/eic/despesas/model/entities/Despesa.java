@@ -1,6 +1,6 @@
 package ifpr.pgua.eic.despesas.model.entities;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Despesa {
     
@@ -8,9 +8,9 @@ public class Despesa {
     private String titulo;
     private String tipo;
     private Double valor;
-    private LocalDate data;
+    private LocalDateTime data;
     
-    public Despesa(Integer id, String titulo, String tipo, Double valor, LocalDate data) {
+    public Despesa(Integer id, String titulo, String tipo, Double valor, LocalDateTime data) {
         this.id = id;
         this.titulo = titulo;
         this.tipo = tipo;
@@ -18,7 +18,7 @@ public class Despesa {
         this.data = data;
     }
 
-    public Despesa(String titulo, String tipo, Double valor, LocalDate data) {
+    public Despesa(String titulo, String tipo, Double valor, LocalDateTime data) {
         this(-1, titulo, tipo, valor, data);
     }
 
@@ -54,11 +54,11 @@ public class Despesa {
         this.valor = valor;
     }
 
-    public LocalDate getData() {
+    public LocalDateTime getData() {
         return data;
     }
 
-    public void setData(LocalDate data) {
+    public void setData(LocalDateTime data) {
         this.data = data;
     }
     

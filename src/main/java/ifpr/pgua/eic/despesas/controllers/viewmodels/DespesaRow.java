@@ -53,7 +53,7 @@ public class DespesaRow {
      * @return SimpleStringProperty com o valor do tipo da despesa.
      */
     public StringProperty tipoProperty(){
-        return new SimpleStringProperty();
+        return new SimpleStringProperty(despesa.getTipo());
     }
 
     /**
@@ -61,7 +61,7 @@ public class DespesaRow {
      * 
      * @return SimpleStringProperty com o valor da data da despesa.
      */
-    public StringProperty anoPublicacaoProperty(){
+    public StringProperty dataProperty(){
         return new SimpleStringProperty(DateTimeFormatter.ofPattern("dd/MM/yyyy").format(despesa.getData()));
     }
 

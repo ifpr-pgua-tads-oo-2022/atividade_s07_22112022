@@ -1,6 +1,8 @@
 package ifpr.pgua.eic.despesas.controllers.viewmodels;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 import ifpr.pgua.eic.despesas.model.entities.Despesa;
 import ifpr.pgua.eic.despesas.model.results.Result;
@@ -67,7 +69,9 @@ public class TelaDespesasViewModel {
 
         Double valor = Double.valueOf(sValor);
 
-        
+        LocalDateTime dataHora = LocalDateTime.of(data, LocalTime.now());
+
+
 
         limpar();
 
